@@ -14,11 +14,20 @@
   "contributes": {
     "commands": [
       {
-        "command": "remove-comments.helloWorld",
-        "title": "Hello World"
+        "command": "extension.removeComments",
+        "title": "Hapus Semua Komentar"
       }
     ]
   },
+  "menus": {
+      "editor/context": [
+        {
+          "command": "extension.removeComments",
+          "group": "navigation",
+          "when": "editorTextFocus"
+        }
+      ]
+    },
   "scripts": {
     "vscode:prepublish": "npm run compile",
     "compile": "tsc -p ./",
