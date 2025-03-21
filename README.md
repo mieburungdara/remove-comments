@@ -1,19 +1,16 @@
-```markdown
-# 🧹 Remove Comments Extension
-
-> **English** | [Bahasa Indonesia](#remove-comments-extension---bahasa-indonesia)
+# ✨ Remove Comments Extension
 
 An easy-to-use Visual Studio Code extension to remove:  
-- 🟢 **Single-line comments**  
-- 🟢 **Multi-line comments**  
-- 🟢 **All comments**  
-- 🟢 **Empty lines**  
+- **Single-line comments**  
+- **Multi-line comments**  
+- **All comments**  
+- **Empty lines**  
 
 Perfect for cleaning up messy code and making your files neat and professional!  
 
 ---
 
-## ✨ Features
+## 🎉 Features
 - **Effortless Cleanup:** Remove comments with a single click.  
 - **Multi-Language Support:** Works with PHP, JavaScript, Python, C, C++, HTML, and more.  
 - **Empty Line Remover:** Get rid of those unnecessary blank lines.  
@@ -31,7 +28,7 @@ Perfect for cleaning up messy code and making your files neat and professional!
 ---
 
 ## 🛠️ How to Use  
-- **Option 1:** Right-click in the editor and choose:  
+- **Option 1:** Right-click in the editor and choose `✨ Comment Remover` >  
   - `Remove Single-line Comments`  
   - `Remove Multi-line Comments`  
   - `Remove All Comments`  
@@ -40,7 +37,7 @@ Perfect for cleaning up messy code and making your files neat and professional!
 
 ---
 
-## 🧪 Example  
+## Example  
 
 ### ✅ **Before:**  
 ```php
@@ -56,9 +53,6 @@ It can span multiple lines
 
 // echo "This won't run!";
 echo "Hello, World!";
-
-
-
 # Some unnecessary empty lines here
 ```
 
@@ -83,30 +77,27 @@ If you have any questions or issues, feel free to:
 
 ---
 
----
-
+<br><br><br>
 # 🇮🇩 Remove Comments Extension - Bahasa Indonesia
 
-> **[English](#remove-comments-extension)** | Bahasa Indonesia  
-
 Ekstensi Visual Studio Code yang memudahkan Anda untuk:  
-- 🟢 **Menghapus komentar satu baris**  
-- 🟢 **Menghapus komentar multi-baris**  
-- 🟢 **Menghapus semua komentar**  
-- 🟢 **Menghapus baris kosong**  
+- **Menghapus komentar satu baris**  
+- **Menghapus komentar multi-baris**  
+- **Menghapus semua komentar**  
+- **Menghapus baris kosong**  
 
 Cocok untuk menjaga kode tetap rapi dan profesional!  
 
 ---
-
-## ✨ **Fitur Utama**
+<br><br>
+## 🎉 **Fitur Utama**
 - **Bersihkan dengan Mudah:** Hapus komentar hanya dengan sekali klik.  
 - **Dukungan Multi-Bahasa:** Cocok untuk PHP, JavaScript, Python, C, C++, HTML, dan lainnya.  
 - **Penghapus Garis Kosong:** Singkirkan garis kosong yang tidak perlu.  
 - **Akses dari Menu Konteks:** Klik kanan di editor untuk memulai!  
 
 ---
-
+<br><br>
 ## 🚀 **Cara Install**  
 1. Download file `.vsix` atau cari di Visual Studio Marketplace.  
 2. Buka **Visual Studio Code**.  
@@ -115,18 +106,18 @@ Cocok untuk menjaga kode tetap rapi dan profesional!
 5. Ekstensi siap digunakan!  
 
 ---
-
+<br><br>
 ## 🛠️ **Cara Menggunakan**  
 - **Opsi 1:** Klik kanan di editor dan pilih salah satu opsi berikut:  
   - `Hapus Komentar Satu Baris`  
   - `Hapus Komentar Multi-Baris`  
   - `Hapus Semua Komentar`  
-  - `Hapus Garis Kosong`  
+  - `Hapus Baris Kosong`  
 - **Opsi 2:** Tekan `Ctrl + Shift + P` ➡️ Cari `"Remove Comments"` untuk menjalankan perintah.  
 
 ---
-
-## 🧪 **Contoh Penggunaan**  
+<br><br>
+## **Contoh Penggunaan**  
 
 ### ✅ **Sebelum:**  
 ```php
@@ -142,9 +133,6 @@ dengan beberapa baris
 
 // echo "Kode ini tidak akan dijalankan!";
 echo "Hello, World!";
-
-
-
 # Garis kosong yang tidak diperlukan
 ```
 
@@ -155,13 +143,14 @@ echo "Hello, World!";
 ```
 
 ---
-
+<br><br>
 ## 🗒️ **Catatan Penting**
 - Ekstensi hanya menghapus komentar dari file yang sedang dibuka.  
 - Sangat mendukung file berbahasa **PHP**.  
 - Pastikan Anda menyimpan file setelah perubahan.  
 
 ---
+<br><br>
 
 ## 📬 **Dukungan**  
 Jika Anda memiliki pertanyaan atau masalah:  
@@ -170,4 +159,3 @@ Jika Anda memiliki pertanyaan atau masalah:
 ---
 
 🎉 **Terima Kasih Telah Menggunakan Remove Comments Extension!** 😊
-```
