@@ -1,60 +1,51 @@
 {
-  "name": "remove-comments",
-  "displayName": "Remove Comments",
-  "description": "Untuk menghapus komen di vscode",
-  "version": "1.0.0",
+  "name": "mieburungdara-remove-comments",
+  "displayName": "CM Remove Comments",
+  "description": "Remove All Comments from file",
+  "version": "1.0.2",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mieburungdara/remove-comments.git"
+  },
+  "publisher": "RezaFahmi",
   "engines": {
     "vscode": "^1.85.0"
   },
   "categories": [
     "Other"
   ],
-  "activationEvents": [
+  "activationEvents": [ 
     "onCommand:extension.removeSingleLineComments",
     "onCommand:extension.removeMultiLineComments",
     "onCommand:extension.removeAllComments",
-    "onCommand:extension.removeEmptyLines"
+    "onCommand:extension.removeEmptyLines"   
   ],
   "main": "./out/extension.js",
   "contributes": {
-    "commands": [
-      {
-        "command": "extension.removeSingleLineComments",
-        "title": "Hapus Single-line Komentar"
-      },
-      {
-        "command": "extension.removeMultiLineComments",
-        "title": "Hapus Multi-line Komentar"
-      },
-      {
-        "command": "extension.removeAllComments",
-        "title": "Hapus Semua Komentar"
-      },
-      {
-        "command": "extension.removeEmptyLines",
-        "title": "Hapus Garis Kosong"
-      }
-    ],
     "menus": {
       "editor/context": [
         {
+          "command": "-",
+          "group": "removeCommentsGroup"
+        },
+        {
           "command": "extension.removeSingleLineComments",
-          "group": "navigation",
+          "group": "removeCommentsGroup",
           "when": "editorTextFocus"
         },
         {
           "command": "extension.removeMultiLineComments",
-          "group": "navigation",
+          "group": "removeCommentsGroup",
           "when": "editorTextFocus"
         },
         {
           "command": "extension.removeAllComments",
-          "group": "navigation",
+          "group": "removeCommentsGroup",
           "when": "editorTextFocus"
         },
         {
           "command": "extension.removeEmptyLines",
-          "group": "navigation",
+          "group": "removeCommentsGroup",
           "when": "editorTextFocus"
         }
       ]

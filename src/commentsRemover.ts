@@ -1,7 +1,7 @@
 import * as vscode from 'vscode';
 
 // Regex untuk PHP
-const phpSingleLineComment = /\/\/.*?$|#.*?$/gm;
+const phpSingleLineComment = /\/\/(?!\[|\w|https?:\/\/).*?$|#.*?$/gm;
 const phpMultiLineComment = /\/\*[\s\S]*?\*\//gm;
 const phpAllComments = /\/\/.*?$|\/\*[\s\S]*?\*\/|#.*?$/gm;
 const emptyLineRegex = /^\s*[\r\n]/gm;
@@ -44,5 +44,5 @@ export function removeAllComments() {
 }
 
 export function removeEmptyLines() {
-  removeCommentsUsingRegex(emptyLineRegex, 'Garis kosong berhasil dihapus!');
+  removeCommentsUsingRegex(emptyLineRegex, 'Baris kosong berhasil dihapus!');
 }
