@@ -17,6 +17,31 @@
   "activationEvents": [],
   "main": "./out/extension.js",
   "contributes": {
+    "configuration": {
+      "title": "Regex Remover Settings",
+      "properties": {
+        "regexRemover.singleLineComment": {
+          "type": "string",
+          "default": "//.*?$|#.*?$",
+          "description": "Regex for removing single-line comments"
+        },
+        "regexRemover.multiLineComment": {
+          "type": "string",
+          "default": "/\\*[\\s\\S]*?\\*/",
+          "description": "Regex for removing multi-line comments"
+        },
+        "regexRemover.emptyLine": {
+          "type": "string",
+          "default": "^\\s*$",
+          "description": "Regex for removing empty lines"
+        },
+        "regexRemover.disableNotifications": {
+          "type": "boolean",
+          "default": false,
+          "description": "Disable all notifications"
+        }
+      }
+    },
     "commands": [
       {
         "command": "extension.removeSingleLineComments",
@@ -25,10 +50,6 @@
       {
         "command": "extension.removeMultiLineComments",
         "title": "Remove Multi-Line Comments"
-      },
-      {
-        "command": "extension.removeAllComments",
-        "title": "Remove All Comments"
       },
       {
         "command": "extension.removeEmptyLines",
@@ -56,10 +77,6 @@
         },
         {
           "command": "extension.removeMultiLineComments",
-          "when": "editorTextFocus"
-        },
-        {
-          "command": "extension.removeAllComments",
           "when": "editorTextFocus"
         },
         {
