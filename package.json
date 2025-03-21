@@ -2,32 +2,64 @@
   "name": "remove-comments",
   "displayName": "Remove Comments",
   "description": "Untuk menghapus komen di vscode",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "engines": {
-    "vscode": "^1.98.0"
+    "vscode": "^1.85.0"
   },
   "categories": [
     "Other"
   ],
-  "activationEvents": [],
+  "activationEvents": [
+    "onCommand:extension.removeSingleLineComments",
+    "onCommand:extension.removeMultiLineComments",
+    "onCommand:extension.removeAllComments",
+    "onCommand:extension.removeEmptyLines"
+  ],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "extension.removeComments",
+        "command": "extension.removeSingleLineComments",
+        "title": "Hapus Single-line Komentar"
+      },
+      {
+        "command": "extension.removeMultiLineComments",
+        "title": "Hapus Multi-line Komentar"
+      },
+      {
+        "command": "extension.removeAllComments",
         "title": "Hapus Semua Komentar"
+      },
+      {
+        "command": "extension.removeEmptyLines",
+        "title": "Hapus Garis Kosong"
       }
-    ]
-  },
-  "menus": {
+    ],
+    "menus": {
       "editor/context": [
         {
-          "command": "extension.removeComments",
+          "command": "extension.removeSingleLineComments",
+          "group": "navigation",
+          "when": "editorTextFocus"
+        },
+        {
+          "command": "extension.removeMultiLineComments",
+          "group": "navigation",
+          "when": "editorTextFocus"
+        },
+        {
+          "command": "extension.removeAllComments",
+          "group": "navigation",
+          "when": "editorTextFocus"
+        },
+        {
+          "command": "extension.removeEmptyLines",
           "group": "navigation",
           "when": "editorTextFocus"
         }
       ]
-    },
+    }
+  },
   "scripts": {
     "vscode:prepublish": "npm run compile",
     "compile": "tsc -p ./",

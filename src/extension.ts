@@ -1,12 +1,15 @@
 import * as vscode from 'vscode';
-import { removeComments } from './commentsRemover';
+import { removeSingleLineComments, removeMultiLineComments, removeAllComments, removeEmptyLines } from './commentsRemover';
 
 export function activate(context: vscode.ExtensionContext) {
-  const disposable = vscode.commands.registerCommand('extension.removeComments', () => {
-    removeComments();
-  });
+  context.subscriptions.push(
+    vscode.commands.registerCommand('extension.removeSingleLineComments', removeSingleLineComments),
+    vscode.commands.registerCommand('extension.removeMultiLineComments', removeMultiLineComments),
+    vscode.commands.registerCommand('extension.removeAllComments', removeAllComments),
+    vscode.commands.registerCommand('extension.removeEmptyLines', removeEmptyLines)
+  );
 
-  context.subscriptions.push(disposable);
+  vscode.window.showInformationMessage('Ekstensi Remove Comments & Empty Lines diaktifkan!');
 }
 
 export function deactivate() {}
