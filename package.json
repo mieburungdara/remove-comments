@@ -14,44 +14,62 @@
   "categories": [
     "Other"
   ],
-  "activationEvents": [ 
-    "onCommand:extension.removeSingleLineComments",
-    "onCommand:extension.removeMultiLineComments",
-    "onCommand:extension.removeAllComments",
-    "onCommand:extension.removeEmptyLines"   
-  ],
+  "activationEvents": [],
   "main": "./out/extension.js",
   "contributes": {
+    "commands": [
+      {
+        "command": "extension.removeSingleLineComments",
+        "title": "Remove Single Line Comments"
+      },
+      {
+        "command": "extension.removeMultiLineComments",
+        "title": "Remove Multi-Line Comments"
+      },
+      {
+        "command": "extension.removeAllComments",
+        "title": "Remove All Comments"
+      },
+      {
+        "command": "extension.removeEmptyLines",
+        "title": "Remove Empty Lines"
+      }
+    ],
+    "submenus": [
+      {
+        "id": "commentRemoverMenu",
+        "label": "✨ Comment Remover"
+      }
+    ],
     "menus": {
       "editor/context": [
         {
-          "command": "-",
-          "group": "removeCommentsGroup"
-        },
+          "submenu": "commentRemoverMenu",
+          "group": "navigation",
+          "when": "editorTextFocus"
+        }
+      ],
+      "commentRemoverMenu": [
         {
           "command": "extension.removeSingleLineComments",
-          "group": "removeCommentsGroup",
           "when": "editorTextFocus"
         },
         {
           "command": "extension.removeMultiLineComments",
-          "group": "removeCommentsGroup",
           "when": "editorTextFocus"
         },
         {
           "command": "extension.removeAllComments",
-          "group": "removeCommentsGroup",
           "when": "editorTextFocus"
         },
         {
           "command": "extension.removeEmptyLines",
-          "group": "removeCommentsGroup",
           "when": "editorTextFocus"
         }
       ]
     }
   },
-  "scripts": {
+    "scripts": {
     "vscode:prepublish": "npm run compile",
     "compile": "tsc -p ./",
     "watch": "tsc -watch -p ./",
